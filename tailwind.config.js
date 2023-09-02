@@ -32,6 +32,9 @@ module.exports = {
         "body-color": "#637381",
         warning: "#FBBF24",
       },
+      spacing: {
+        '1/1': '100%',
+      },
       boxShadow: {
         input: "0px 7px 20px rgba(0, 0, 0, 0.03)",
         pricing: "0px 39px 23px -27px rgba(0, 0, 0, 0.04)",

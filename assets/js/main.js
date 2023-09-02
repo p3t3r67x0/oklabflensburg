@@ -1,13 +1,20 @@
-(function () {
-  "use strict";
+
+"use strict";
+
+import {projectsContainer, getProjects} from "./modules/data.js";
+  document.addEventListener('DOMContentLoaded',() => {
+    getProjects();
+   
+  })
 
   // ======= Sticky
   window.onscroll = function () {
+    console.log('asds');
     const ud_header = document.querySelector(".ud-header");
     const sticky = ud_header.offsetTop;
     const logo = document.querySelector(".header-logo");
 
-    if (window.pageYOffset > sticky) {
+    if (window.scrollY > sticky) {
       ud_header.classList.add("sticky");
     } else {
       ud_header.classList.remove("sticky");
@@ -36,10 +43,13 @@
   let navbarToggler = document.querySelector("#navbarToggler");
   const navbarCollapse = document.querySelector("#navbarCollapse");
 
+  if(navbarToggler){
+    
   navbarToggler.addEventListener("click", () => {
     navbarToggler.classList.toggle("navbarTogglerActive");
     navbarCollapse.classList.toggle("hidden");
   });
+  }
 
   //===== close navbar-collapse when a  clicked
   document
@@ -103,4 +113,5 @@
   document.querySelector(".back-to-top").onclick = () => {
     scrollTo(document.documentElement);
   };
-})();
+
+

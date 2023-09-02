@@ -1,0 +1,93 @@
+{
+    "name": "Projekte - OK Lab Flensburg",
+    "version": 0.1,
+    "projects": [{
+        "lab": "Flensburg",
+        "title": "Bodenfläche nach Art der Nutzung",
+        "teaser": "Diese interaktive Karte zeigt die Verteilung der verschiedenen Flächennutzungsarten beim Klick auf die entsprechende Gemeinde an. So lässt sich in Kürze herausfinden in welchen Regionen der Waldflächenanteil besonders hoch ist. Dies ist…",
+        "description": "Diese interaktive Karte zeigt die Verteilung der verschiedenen Flächennutzungsarten beim Klick auf die entsprechende Gemeinde an. So lässt sich in Kürze herausfinden in welchen Regionen der Waldflächenanteil besonders hoch ist. Dies ist ein erster Prototyp, welcher mit mehr Filter-Möglichkeiten ausgebaut werden soll. Zudem wollen wir auch die Daten der kreisfreien Städte und Stadtstaaten mit aufnehmen.",
+        "year": 2023,
+        "categories": "Umwelt",
+        "collaborators": "Aurelius Wendelken, Alexaner Eichhorn, Steffen Kunst",
+        "status": "Sucht Mitstreiter",
+        "link": "https://bodennutzung.oklabflensburg.de",
+        "img": "https://bodennutzung.oklabflensburg.de/static/screenshot_surface_map.jpg"
+    }, {
+        "lab": "Flensburg",
+        "title": "Karte mit denkmalgeschützen Gebäuden in Flensburg",
+        "teaser": "Während eines Spaziergangs durch Flensburg ist die Idee zu dieser interaktiven webbasierten Karte mit den Daten des Landesamtes für Denkmalpflege entstanden. Nach einigen Stunden der maschinellen Aufarbeitung und Betrachtung des…",
+        "description": "Während eines Spaziergangs durch Flensburg ist die Idee zu dieser interaktiven webbasierten Karte mit den Daten des Landesamtes für Denkmalpflege entstanden. Nach einigen Stunden der maschinellen Aufarbeitung und Betrachtung des Datensatzes und dem anschließenden maschinellen Zuordnen der jeweiligen geografischen Position, konnten die ersten Einträge visualisiert werden. Unser Ziel ist es, Interessierten über eine Suche im Quartier denkmalgeschützte Gebäude anzuzeigen.",
+        "year": 2023,
+        "categories": "Politik",
+        "collaborators": "Aurelius Wendelken",
+        "status": "Sucht Replication",
+        "link": "https://denkmalschutz.kunstbube.com",
+        "img": "https://denkmalschutz.kunstbube.com/static/denkmalliste_stadt_flensburg.png"
+    }, {
+        "lab": "Flensburg",
+        "title": "Spielplatzkarte der Stadt Flensburg",
+        "teaser": "Diese webbasierte Karte ist auf Basis der Daten des TBZ Flensburg entstanden. Diese Institution führt zwar selbst eine Karte der \"Spielflächen\", wie sie im Amtsdeutsch bezeichnet werden, diese ist jedoch weder im Netz auffindbar noch für…",
+        "description": "Diese webbasierte Karte ist auf Basis der Daten des TBZ Flensburg entstanden. Diese Institution führt zwar selbst eine Karte der \"Spielflächen\", wie sie im Amtsdeutsch bezeichnet werden, diese ist jedoch weder im Netz auffindbar noch für nicht IT-interessierte Besucher:innen gut nutzbar. Nach einigen Stunden des Reverse Engineerings konnten wir die Daten extrahieren und mittels eines selbst geschriebenen Scripts in ein maschinenlesbares offenes Format umwandeln und auf Basis der OpenStreetMap Karte darstellen.",
+        "year": 2023,
+        "categories": "Gesellschaft",
+        "collaborators": "Aurelius Wendelken, Roald Christesen, Alexaner Eichhorn, Steffen Kunst, Gabi Ritter",
+        "status": "Sucht Kreative",
+        "link": "https://spielplaetze.kunstbube.com",
+        "img": "https://spielplaetze.kunstbube.com/static/spielplaetze_in_flensburg.jpg"
+    }, {
+        "lab": "Flensburg",
+        "title": "Karte der Recyclingcontainer in Flensburg",
+        "teaser": "Karte der Standorte von Recycling Containern für Altkleidung und Altglas vom Technisches Betriebszentrum Flensburg AöR. Es werden nur Standorte auf städtischen Flächen angezeigt. Unser Ziel ist es, Standort und Anbieterdaten anderer…",
+        "description": "Karte der Standorte von Recycling Containern für Altkleidung und Altglas vom Technisches Betriebszentrum Flensburg AöR. Es werden nur Standorte auf städtischen Flächen angezeigt. Unser Ziel ist es, Standort und Anbieterdaten anderer Recycling Container in diese Anwendung aufzunehmen.",
+        "year": 2023,
+        "categories": "Gesellschaft",
+        "collaborators": "Aurelius Wendelken, Roald Christesen, Alexaner Eichhorn, Steffen Kunst, Gabi Ritter",
+        "status": "Sucht Kreative",
+        "link": "https://recycling.oklabflensburg.de",
+        "img": "https://recycling.oklabflensburg.de/static/recycling_in_flensburg.jpg"
+    }, {
+        "lab": "Flensburg",
+        "title": "Straßenbäume der Stadt Flensburg",
+        "teaser": "Im ersten Schritt haben wir einen vorhandenen Datensatz der Straßenbäume der Stadt Flensburg genutzt, um eine einfache Darstellung auf der Karte als transparente Anlaufstelle für Interessierte zu schaffen. Hier oben im Norden machen sich…",
+        "description": "Im ersten Schritt haben wir einen vorhandenen Datensatz der Straßenbäume der Stadt Flensburg genutzt, um eine einfache Darstellung auf der Karte als transparente Anlaufstelle für Interessierte zu schaffen. Hier oben im Norden machen sich klimatische Wetterveränderungen besonders bemerkbar. Deshalb stellen wir uns die folgenden Fragen: - Welche Baumarten sind für die klimatischen Voraussetzungen besonders gut geeignet? - Welche Straßenbäume können trotz eines nassen, moorigen oder lehmigen Boden gute Wurzeln bilden? - Wie verwurzelt sind Straßenbäume in Hanglagen oder aber an besonders offenen Stellen? - Welche Baumart verändert das Mikroklima durch Schatten bei besonders heißen Tagen? Diese Projekt ist mit freundlicher Unterstützung des TBZ Flensburg AöR entstanden. Das Technische Betriebszentrum Flensburg AöR hat die Daten des Straßenbäume der Stadt Flensburg, unterteilt nach der botanischen Nomenklatur der Gattung, Art und Sorte sowie einer eindeutigen Nummer und deren Koordinaten zur Verfügung. Leider fehlt in diesem Datensatz die Baumhöhe, der Kronendurchmesser und das Pflanzjahr. Unser Ziel ist es, durch unsere Kartenanwendung, Bürger:innen im Quartier eine Plattform zu bieten um sich niederschwellig mit dem Thema der Straßenbäume und deren Bedeutung im Zusammenhang der klimatischen Veränderungen auseinandersetzen und vertraut zu machen. Wir entwickeln eine Implementierung zur Vergabe von Baumpatenschaften.",
+        "year": 2023,
+        "categories": "Umwelt",
+        "collaborators": "Aurelius Wendelken, Roald Christesen, Alexaner Eichhorn, Steffen Kunst, Gabi Ritter",
+        "status": "Sucht Mitstreiter",
+        "link": "https://baumkataster-flensburg.de",
+        "img": "https://baumkataster-flensburg.de/static/baumkataster_stadt_flensburg.png"
+    }, {
+        "lab": "Flensburg",
+        "title": "Unfallorte auf einer interaktiven webbasierten Karte",
+        "teaser": "Während einer kleinen Brainstorming Session ist diese interaktive webbasierte Karte mit den Daten des Bundesamtes für Kartographie und Geodäsie entstanden. Nach einigen Stunden der maschinellen Aufarbeitung und Betrachtung der Datensätze…",
+        "description": "Während einer kleinen Brainstorming Session ist diese interaktive webbasierte Karte mit den Daten des Bundesamtes für Kartographie und Geodäsie entstanden. Nach einigen Stunden der maschinellen Aufarbeitung und Betrachtung der Datensätze haben wir uns entschlossen, die Daten in eine PostGIS PostgreSQL Datenbank einzupflegen und zu indexieren. Unser Ziel ist es, Entscheidungsträger:innen in Kommunen, Verwaltungen und auch privaten Unternehmen zu ermöglichen, eine datenbasierte Entscheidung zu treffen.",
+        "year": 2023,
+        "categories": "Mobilität",
+        "collaborators": "Aurelius Wendelken",
+        "status": "Sucht Mitstreiter",
+        "link": "https://open-accident-map.de",
+        "img": "https://open-accident-map.de/static/unfallkarte_stadt_flensburg.png"
+    }, {
+        "lab": "Flensburg",
+        "title": "Interaktive Kommunalwahl Karte",
+        "teaser": "Für die anstehnden Kommunalwahlen in Schleswig-Holstein haben wir uns vom OK Lab Flensburg zur Aufgabe gemacht die Polygonen der Gebietsgrenzen der Wahlkreise als auch der Wahlbezirke der jeweiligen Gemeinden, Kommunen und Städte auf einer…",
+        "description": "Für die anstehnden Kommunalwahlen in Schleswig-Holstein haben wir uns vom OK Lab Flensburg zur Aufgabe gemacht die Polygonen der Gebietsgrenzen der Wahlkreise als auch der Wahlbezirke der jeweiligen Gemeinden, Kommunen und Städte auf einer interaktiven Karte mit den jeweils zugelassenen Kandidat:innen zu visualisieren. Unter anderem wollten wir dabei folgende Fragestellungen betrachten - Welche Kandidat:innen sind in der jeweiligen Gemeinde oder dem Quartier zugelassen? - Welche Parteien oder Wählergemeinschaften stehen in der jeweiligen Gemeinde oder dem Quartier auf der Liste? - Wie waren die offizielen Wahlergebnisse der Kommunalwahl 2018 in dem jeweiligen Wahlbezirken oder Wahlkreisen? Dieses Projekt hat uns gezeigt, dass es sehr herausfordernd ist, Kontakt mit den jeweiligen Kommunen, Kreisen, Landräten und Gemeinderäten herzustellen, um die gewünschten Informationen in einem maschinenlesbaren Format für die Weiterverarbeitung mit offenen Lizenzen über unterschiedliche informationsfreiheitsanfragen zu bekommen. Trotz jeglicher Bemühungen gibt es noch viel Potenzial bei der Digitalisierung in Schleswig-Holstein. Wir vom OK Lab Flensburg unterstützen Kommunen, Kreise und das Land gerne bei ähnlichen Vorhaben und freuen uns auf eine Hohe Wahlbeteiligung. Wir freuen uns über jegliche Unterstützung diese Art der Wahlvorbereitungen und Tranzparenz auch in anderen Wahlen anbieten zu können.",
+        "year": 2023,
+        "categories": "Gesellschaft",
+        "collaborators": "Aurelius Wendelken",
+        "status": "Sucht Mitstreiter",
+        "link": "https://kommunalwahl-schleswig-holstein.de",
+        "img": "https://kommunalwahl-schleswig-holstein.de/static/open_local_elections_map.jpg"
+    }, {
+        "lab": "Flensburg",
+        "title": "Sozialatlas der Stadt Flensburg",
+        "teaser": "Der digitale Sozialatlas soll eine Grundlage für verschiedene Planungsaktivitäten der Stadt Flensburg und deren Büger:innen anbieten. Ziel ist die differenzierte Beobachtung von relevanten Indikatoren, die Aufschluss über die soziale Lage…",
+        "description": "Der digitale Sozialatlas soll eine Grundlage für verschiedene Planungsaktivitäten der Stadt Flensburg und deren Büger:innen anbieten. Ziel ist die differenzierte Beobachtung von relevanten Indikatoren, die Aufschluss über die soziale Lage der Stadt und ihrer 13 Stadtteile geben. Bitte dazu auf den Umriss eines Stadtteils klicken, um die jeweiligen Details angezeigt zu bekommen. Dies ist ein erster Prototyp. Wir möchten diesen mit Filtermöglichkeiten ausbauen.",
+        "year": 2023,
+        "categories": "Politik",
+        "collaborators": "Aurelius Wendelken, Roald Christesen, Chantal Butenberg, Steffen Kunst, Gosia Tutaj, Gabi Ritter",
+        "status": "Sucht Mitstreiter",
+        "link": "https://sozialatlas.oklabflensburg.de",
+        "img": "https://sozialatlas.oklabflensburg.de/static/screenshot_social_map.jpg"
+    }]
+}

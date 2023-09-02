@@ -736,10 +736,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0px;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .block{
   display: block;
 }
@@ -1327,16 +1323,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 62px;
 }
 
-.pr-4{
-  padding-right: 1rem;
-}
-
-.pl-4{
-  padding-left: 1rem;
-}
-
-.pt-1\/1{
+.pt-\[100\%\]{
   padding-top: 100%;
+}
+
+.pt-100\%{
+  padding-top: 100%;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
+}
+
+.pt-60{
+  padding-top: 15rem;
 }
 
 .text-left{
@@ -1655,56 +1655,6 @@ body {
   background-color: rgb(9 14 52 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.tns-outer{
-  position: relative;
-  .tns-controls{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: calc(50% - 50px);
-    .prev{
-      position: relative;
-      width: 30px;
-      margin-left: -50px;
-      .bar{
-        position: absolute;
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        &:first-child{
-          top: 10px;
-          transform: rotate(45deg);
-        }
-        &:last-child{
-          top: -10px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-    .next{
-      position: relative;
-      width: 30px;
-      margin-right: -50px;
-      .bar{
-        position: absolute;
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        &:first-child{
-          top: -10px;
-          transform: rotate(45deg);
-        }
-        &:last-child{
-          top: 10px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
 }
 
 .after\:absolute::after{
