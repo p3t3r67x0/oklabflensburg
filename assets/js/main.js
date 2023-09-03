@@ -2,12 +2,14 @@
 "use strict";
 
 import {projectsContainer, getProjects} from "./modules/data.js";
+
+
   document.addEventListener('DOMContentLoaded',() => {
     getProjects();
    
   })
 
-  // ======= Sticky
+// ======= Sticky
   window.onscroll = function () {
     const navbar = document.querySelector('#navbarCollapse');
     const ud_header = document.querySelector(".ud-header");
@@ -26,14 +28,6 @@ import {projectsContainer, getProjects} from "./modules/data.js";
       navbar.classList.remove("sticky");
     }
 
-
-    // === logo change
-    if (ud_header.classList.contains("sticky")) {
-      //logo.src = "assets/images/logo/logo-white.svg";
-    } else {
-      logo.src = "assets/images/logo/logo.svg";
-    }
-
     // show or hide the back-top-top button
     const backToTop = document.querySelector(".back-to-top");
     if (
@@ -45,7 +39,7 @@ import {projectsContainer, getProjects} from "./modules/data.js";
       backToTop.style.display = "none";
     }
   };
-
+  /* 
   // ===== responsive navbar
   let navbarToggler = document.querySelector("#navbarToggler");
   const navbarCollapse = document.querySelector("#navbarCollapse");
@@ -119,6 +113,6 @@ import {projectsContainer, getProjects} from "./modules/data.js";
 
   document.querySelector(".back-to-top").onclick = () => {
     scrollTo(document.documentElement);
-  };
+  }; */
 
 

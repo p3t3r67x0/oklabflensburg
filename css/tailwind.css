@@ -365,6 +365,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -528,6 +535,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -758,10 +766,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .hidden {
   display: none;
 }
@@ -800,10 +804,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-1\/2 {
   height: 50%;
-}
-
-.h-\[170px\] {
-  height: 170px;
 }
 
 .h-14 {
@@ -941,10 +941,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   resize: both;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -967,10 +963,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .overflow-hidden {
@@ -1196,10 +1188,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .p-5 {
   padding: 1.25rem;
 }
@@ -1341,24 +1329,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.pt-\[170px\] {
-  padding-top: 170px;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
 
 .pr-10 {
   padding-right: 2.5rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
 }
 
 .pb-12 {
@@ -1379,6 +1355,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-1\/1 {
   padding-top: 100%;
+}
+
+.pt-\[50rem\] {
+  padding-top: 50rem;
 }
 
 .text-left {
@@ -1547,12 +1527,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
+.placeholder-white:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-placeholder-opacity));
+}
+
 .placeholder-white::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
 .placeholder-\[\#ACB6BE\]::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(172 182 190 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-\[\#ACB6BE\]:-ms-input-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
 }
@@ -1613,9 +1603,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1645,14 +1635,6 @@ body {
   font-stretch: 90%;
 }
 
-.std-header {
-  padding-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
 .logo-img,.logo-text{
   transition: all 0.2s ease-in-out;
 }
@@ -1662,9 +1644,9 @@ body {
   z-index: 9999;
   background-color: rgb(10 39 56 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.8;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   -webkit-backdrop-filter: blur(5px);
@@ -1672,20 +1654,15 @@ body {
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-.ud-header.sticky{
-  height: 70px;
-  padding: 5px;
-}
-
-.ud-header.sticky .logo-img{
+.sticky .logo-img{
   max-width: 50px;
 }
 
-.ud-header.sticky .logo-text{
+.sticky .logo-text{
   max-width: 140px;
 }
 
-.ud-header.sticky .navbar-logo {
+.sticky .navbar-logo {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -1728,9 +1705,6 @@ body {
     position: fixed;
     top: 57px;
     width: 100%;
-    + #content{
-      padding-top: 100px;
-    }
   }
 }
 
@@ -1897,7 +1871,8 @@ body {
 }
 
 .hover\:underline:hover {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .hover\:opacity-70:hover {
