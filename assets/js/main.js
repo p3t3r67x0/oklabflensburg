@@ -9,7 +9,7 @@ import {projectsContainer, getProjects} from "./modules/data.js";
 
   // ======= Sticky
   window.onscroll = function () {
-    console.log('asds');
+    const navbar = document.querySelector('#navbarCollapse');
     const ud_header = document.querySelector(".ud-header");
     const sticky = ud_header.offsetTop;
     const logo = document.querySelector(".header-logo");
@@ -20,9 +20,16 @@ import {projectsContainer, getProjects} from "./modules/data.js";
       ud_header.classList.remove("sticky");
     }
 
+    if (window.scrollY > navbar.offsetTop) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+
+
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/logo-white.svg";
+      //logo.src = "assets/images/logo/logo-white.svg";
     } else {
       logo.src = "assets/images/logo/logo.svg";
     }

@@ -15,7 +15,7 @@
                      '<div class="h-0 relative pt-1/1 mb-4">' +
                     '<img src="' + item.img.replace('/static','') + '" class="shadow rounded-full absolute inset-0 w-full h-full object-cover mb-4"/>' + 
                      '</div>' +
-                    '<div class="text-white">' +  item.title + '</div>'+
+                    '<div class="text-white tracking-wider font-thin font-stretch-110">' +  item.title + '</div>'+
                     '</a>';
                 
                  })
@@ -24,10 +24,24 @@
 
              var slider = tns({
                 container: '.tns-slider',
-                items: 4,
+                items: 1,
                 slideBy: 1,
                 autoplay: false,
-                controlsText: ['<div class="prev" ><span class="bar"></span><span class="bar"></span></div>','<div class="next" ><span class="bar"></span><span class="bar"></span></div>']
+                controlsText: ['<div class="prev" ><span class="bar"></span><span class="bar"></span></div>','<div class="next" ><span class="bar"></span><span class="bar"></span></div>'],
+                responsive: {
+                    480: {
+                        items: 2,
+                    },
+                    768: {
+                        items: 3,
+                    },
+                    1024: {
+                        items: 3,
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
               });
 
          } catch {

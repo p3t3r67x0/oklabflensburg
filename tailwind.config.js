@@ -32,6 +32,10 @@ module.exports = {
         "body-color": "#637381",
         warning: "#FBBF24",
       },
+      font:{
+        bold: "letter-spacing: 1px",
+        thin: "font-stretch: 110%"
+      },
       spacing: {
         '1/1': '100%',
       },
