@@ -31,9 +31,18 @@ body {
 }
 
 .std-header{
-  @apply pb-3 text-xl text-4xl font-bold text-primary;
+  @apply mb-3 text-primary;
+  .mainline{
+    @apply mb-2 text-4xl font-bold;
+  }
+  .subline{
+    @apply text-xl font-medium;
+    font-stretch: 120%;
+  }
 }
-
+p{
+  @apply mb-3;
+}
 .logo-img,.logo-text{
  transition: all 0.2s ease-in-out; 
 }
@@ -145,4 +154,14 @@ body {
       }
     }
   }
+}
+
+.divider{
+  @apply border-0 h-[2px] w-full;
+  background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		rgba(10, 39, 56, 0.5),
+		rgba(0, 0, 0, 0)
+	);
 }
