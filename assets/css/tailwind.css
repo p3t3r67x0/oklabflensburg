@@ -365,13 +365,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -539,7 +532,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -1423,6 +1415,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 100;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1493,11 +1489,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
 }
 
-.placeholder-\[\#ACB6BE\]:-ms-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(172 182 190 / var(--tw-placeholder-opacity));
-}
-
 .placeholder-\[\#ACB6BE\]::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
@@ -1554,9 +1545,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1568,9 +1559,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition-colors {
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1639,9 +1628,9 @@ p {
   z-index: 9999;
   background-color: rgb(10 39 56 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.8;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   -webkit-backdrop-filter: blur(5px);
@@ -1700,7 +1689,6 @@ p {
 }
 
 #navbarWrapper{
-  position: -webkit-sticky;
   position: sticky;
   top: -1px;
   &.static {
@@ -1714,9 +1702,9 @@ p {
       --tw-bg-opacity: 0.8;
     }
     #navbarCollapse {
-      transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 150ms;
     }
@@ -1800,6 +1788,31 @@ p {
 		rgba(10, 39, 56, 0.5),
 		rgba(0, 0, 0, 0)
 	);
+}
+
+#menuToggle{
+  .bar{
+    position: absolute;
+    width: 1.6rem
+  }
+  .bar {
+    height: 0.25rem;
+  }
+  .bar {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+  .bar{
+    &.bar-1{
+      top: 0.4rem;
+    }
+    &.bar-2{
+      top: 0.9rem
+    }
+    &.bar-3{
+      top: 1.4rem
+    }
+  }
 }
 
 .after\:absolute::after {
@@ -1913,8 +1926,7 @@ p {
 }
 
 .hover\:underline:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .hover\:opacity-70:hover {
@@ -1990,6 +2002,10 @@ p {
 
   .sm\:w-1\/2 {
     width: 50%;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:p-12 {
@@ -2073,10 +2089,6 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
   .md\:justify-start {
     justify-content: flex-start;
   }
@@ -2124,13 +2136,13 @@ p {
     font-size: 26px;
   }
 
-  .md\:text-\[40px\] {
-    font-size: 40px;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-\[40px\] {
+    font-size: 40px;
   }
 }
 

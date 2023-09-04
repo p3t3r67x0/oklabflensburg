@@ -165,3 +165,19 @@ p{
 		rgba(0, 0, 0, 0)
 	);
 }
+#menuToggle{
+  .bar{
+    position: absolute;
+    width: 1.6rem;
+    @apply h-1 bg-white;
+    &.bar-1{
+      top: 0.4rem;
+    }
+    &.bar-2{
+      top: 0.9rem
+    }
+    &.bar-3{
+      top: 1.4rem
+    }
+  }
+}

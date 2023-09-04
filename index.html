@@ -56,7 +56,14 @@
     <div id="navbarWrapper" class="z-10 bg-primary">
         <div class="spacer h-[51px] bg-transparent w-full"></div>
         <nav id="navbarCollapse" class="pb-3 bg-primary">
-            <ul class="container flex flex-col items-center justify-center text-sm md:text-base lg:text-xl md:flex-row">
+           <div class="container flex justify-end">
+            <button id="menuToggle" class="relative p-4 border-2 border-white rounded-lg">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+            </button>
+           </div>
+            <ul class="container flex flex-col items-center justify-center text-sm md:text-base lg:text-xl sm:flex-row">
                 <li class="relative group">
                     <a href="#home"
                         class="flex py-1 mx-8 font-bold text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Projekte</a>
@@ -83,7 +90,7 @@
     <div class="w-full py-3 bg-primary mt-[-100px] h-[100px]"></div>
     <section id="content" class="pt-6 md:pt-8 lg:pt-16">
         <div class="w-full">
-            <div class="container font-medium">
+            <div class="container font-light">
                 <article class="grid grid-cols-1 mb-16 gap-x-8 md:grid-cols-2">
                     <div class="left">
                         <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
