@@ -20,8 +20,8 @@
     <div class="ud-header w-full fixed bg-primary p-4 h-[170px]">
         <div class="container">
             <div class="relative flex items-center justify-between">
-                <div class="max-w-full px-4 w-full text-center">
-                    <a href="index.html" class="home-link wow fadeInUp text-center flex justify-center"
+                <div class="w-full max-w-full px-4 text-center">
+                    <a href="index.html" class="flex justify-center text-center home-link wow fadeInUp"
                         data-wow-delay=".3s">
                         <img src="assets/images/logo/oklabflensburg_logo.svg" alt="image"
                             class="logo-img mr-5 w-full max-w-[30%] md:max-w-[120px] opacity-80 transition duration-300 ease-in-out hover:opacity-100">
@@ -36,7 +36,7 @@
     <div class="w-full flex bg-primary pt-[170px]">
         <div class="container">
             <div
-                class="tracking-wider mt-10 mb-10 flex justify-center text-center max-w-300 font-bold text-white leading-relaxed">
+                class="flex justify-center mt-10 mb-10 font-bold leading-relaxed tracking-wider text-center text-white max-w-300">
                 Offene Daten und Anwendungen<br>
                 Entwickeln, Gestalten, Programmieren.<br>
                 Visualisieren, Beteiligen ...
@@ -45,7 +45,7 @@
         </div>
     </div>
     <!-- PROJECTS -->
-    <div class="w-full bg-primary pb-3">
+    <div class="w-full pb-3 bg-primary">
         <div class="container pl-10 pr-10">
             <div id="projects" class="tns-slider">
 
@@ -53,46 +53,113 @@
         </div>
     </div>
     <!-- NAVBAR -->
-    <nav id="navbarCollapse" class="bg-primary">
-        <ul class="block flex justify-center container py-5 ">
-            <li class="group relative">
-                <a href="#home" class="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-secondary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70">Projekte</a>
-            </li>
-            <li class="group relative">
-                <a href="#about" class="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-secondary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12">Events</a>
-            </li>
-            <li class="group relative">
-                <a href="#team" class="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-secondary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12">Team</a>
-            </li>
-            <li class="group relative">
-                <a href="#pricing" class="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12">Spenden</a>
-            </li>
-            <li class="group relative">
-                <a href="#contact" class="ud-menu-scroll mx-8 flex py-2 text-base text-white group-hover:text-secondary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12">Kontakt</a>
-            </li>
-        </ul>
-    </nav>
-    <section id="content" class="pt-3">
+    <div id="navbarWrapper" class="z-10 bg-primary">
+        <div class="spacer h-[51px] bg-transparent w-full"></div>
+        <nav id="navbarCollapse" class="pb-3 bg-primary">
+            <ul class="container flex flex-col items-center justify-center md:flex-row">
+                <li class="relative group">
+                    <a href="#home"
+                    class="flex py-1 mx-8 text-base font-bold text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Projekte</a>
+                </li>
+                <li class="relative group">
+                    <a href="#about"
+                    class="flex py-1 mx-8 text-base text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Events</a>
+                </li>
+                <li class="relative group">
+                    <a href="#team"
+                    class="flex py-1 mx-8 text-base text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Team</a>
+                </li>
+                <li class="relative group">
+                    <a href="#pricing"
+                    class="flex py-1 mx-8 text-base text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Spenden</a>
+                </li>
+                <li class="relative group">
+                    <a href="#contact"
+                    class="flex py-1 mx-8 text-base text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+   <div class="w-full py-3 bg-primary mt-[-100px] h-[100px]"></div>
+    <section id="content" class="pt-6 md:pt-8 lg:pt-10">
         <div class="w-full">
-            <div class="container">
-                <div class="grid gap-4 grid-cols-2">
-                <div class="p-3">
-                    <div class="std-header">
-                        Überschrift
+            <div class="container font-medium">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <div class="p-3">
+                        <div class="std-header">
+                            Überschrift
+                        </div>
+                        <div class="image-wrap">
+                            <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
+                        </div>
+                        <p class="pb-2">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit nobis natus, repellat ratione
+                            magnam aspernatur inventore, tenetur sed praesentium, fugit incidunt temporibus.
+                            Perspiciatis iure cupiditate neque sapiente. Id explicabo modi dignissimos eveniet cum
+                            voluptate. Aspernatur possimus, mollitia, laborum nostrum optio tenetur quo inventore unde
+                            cum magni doloremque accusamus reiciendis. Ex voluptatem quod magnam! 
+                            </p>
+                            <p class="pb-2">Beatae, voluptate.
+                                Impedit hic, unde quam cupiditate sequi maiores qui, id sunt nemo molestiae debitis fuga
+                                vitae repellendus beatae voluptate iure consequuntur! Minima illo eligendi velit corporis
+                                sequi! Voluptate quod ea numquam doloribus nobis minus, culpa iure excepturi non libero,
+                                cumque ipsa.
+                            </p> <p class="pb-2">
+                            Iste nemo deserunt tempora commodi quis facilis asperiores alias blanditiis
+                            sunt voluptate maxime velit consequuntur iure, molestiae vel officiis ipsam adipisci
+                            eligendi, libero consectetur expedita. Nostrum perferendis consectetur vero sed ducimus.
+                            Error reprehenderit laborum tenetur esse porro ipsa ut cupiditate odio! Consequuntur
+                            assumenda aliquam temporibus ex repellat dolores praesentium eum quae! Esse ad repellendus
+                            veritatis praesentium tempore ipsam magni velit mollitia beatae pariatur, et deleniti quidem
+                            dolore laudantium eius eveniet facilis voluptatem, molestiae exercitationem blanditiis
+                            maiores dolores nesciunt saepe? Officiis dolor voluptatem dolore suscipit architecto
+                            mollitia sit nisi ipsum sapiente labore sequi, excepturi distinctio! Doloribus illo ratione
+                            quidem labore doloremque magni fuga nemo minus voluptas, odio obcaecati dolor, officiis
+                            laboriosam, nesciunt culpa nam ipsum vero ab quas excepturi exercitationem perferendis?
+                            Officiis aliquid animi quam aliquam odio, doloremque blanditiis ullam, id dicta cumque
+                            obcaecati nulla sint ut nemo aut in eum. Placeat ut tempora corporis culpa sapiente illo
+                            pariatur dolor quidem saepe amet ipsam dignissimos harum odio, enim cumque eaque non impedit
+                            nihil assumenda ad earum nesciunt! Voluptas tempora modi architecto placeat delectus
+                            repellat similique sint! Similique voluptates aut dolorum adipisci asperiores, ea nemo!
+                            Exercitationem ea quae eum maiores fugit odio voluptas iure eligendi adipisci, tempore ad
+                            nobis quidem quasi nihil soluta praesentium repellat asperiores itaque.
+                        </p>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit nobis natus, repellat ratione magnam aspernatur inventore, tenetur sed praesentium, fugit incidunt temporibus. Perspiciatis iure cupiditate neque sapiente. Id explicabo modi dignissimos eveniet cum voluptate. Aspernatur possimus, mollitia, laborum nostrum optio tenetur quo inventore unde cum magni doloremque accusamus reiciendis. Ex voluptatem quod magnam! Beatae, voluptate. Impedit hic, unde quam cupiditate sequi maiores qui, id sunt nemo molestiae debitis fuga vitae repellendus beatae voluptate iure consequuntur! Minima illo eligendi velit corporis sequi! Voluptate quod ea numquam doloribus nobis minus, culpa iure excepturi non libero, cumque ipsa. Iste nemo deserunt tempora commodi quis facilis asperiores alias blanditiis sunt voluptate maxime velit consequuntur iure, molestiae vel officiis ipsam adipisci eligendi, libero consectetur expedita. Nostrum perferendis consectetur vero sed ducimus. Error reprehenderit laborum tenetur esse porro ipsa ut cupiditate odio! Consequuntur assumenda aliquam temporibus ex repellat dolores praesentium eum quae! Esse ad repellendus veritatis praesentium tempore ipsam magni velit mollitia beatae pariatur, et deleniti quidem dolore laudantium eius eveniet facilis voluptatem, molestiae exercitationem blanditiis maiores dolores nesciunt saepe? Officiis dolor voluptatem dolore suscipit architecto mollitia sit nisi ipsum sapiente labore sequi, excepturi distinctio! Doloribus illo ratione quidem labore doloremque magni fuga nemo minus voluptas, odio obcaecati dolor, officiis laboriosam, nesciunt culpa nam ipsum vero ab quas excepturi exercitationem perferendis? Officiis aliquid animi quam aliquam odio, doloremque blanditiis ullam, id dicta cumque obcaecati nulla sint ut nemo aut in eum. Placeat ut tempora corporis culpa sapiente illo pariatur dolor quidem saepe amet ipsam dignissimos harum odio, enim cumque eaque non impedit nihil assumenda ad earum nesciunt! Voluptas tempora modi architecto placeat delectus repellat similique sint! Similique voluptates aut dolorum adipisci asperiores, ea nemo! Exercitationem ea quae eum maiores fugit odio voluptas iure eligendi adipisci, tempore ad nobis quidem quasi nihil soluta praesentium repellat asperiores itaque.
-                    </p>
+                    <div class="p-3">
+                        <div class="std-header">
+                            Überschrift
+                        </div>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptate nulla, minima
+                            repellat molestiae, facere voluptatem id iusto suscipit cum repellendus temporibus possimus
+                            ipsa nesciunt, exercitationem nisi quibusdam voluptas. Nisi fugiat ea, necessitatibus nulla
+                            voluptate ipsa earum ipsam sapiente dolorem et accusantium reprehenderit unde nihil porro
+                            quos! Commodi reiciendis illum modi, eius cumque quo! Velit laborum officia inventore culpa,
+                            amet minus aspernatur maxime est voluptas qui, voluptatem sapiente cumque, recusandae
+                            voluptate laboriosam nisi! Incidunt, porro. Nisi, nihil non, molestiae a ad reiciendis
+                            voluptas tempore deleniti adipisci fuga sunt dolorem porro? Facere a obcaecati iure aut
+                            voluptatibus eaque ipsam ratione necessitatibus, odio at fugit. Facere itaque alias
+                            inventore suscipit magnam nobis quibusdam natus. Provident, ab. Laudantium nisi aliquam, eum
+                            aperiam exercitationem porro quia iure commodi voluptatem voluptates pariatur, quam sapiente
+                            ea inventore magnam id voluptate modi nulla alias ipsam distinctio autem. Sequi, ipsum? Iste
+                            tempora architecto cumque laborum fugiat, expedita necessitatibus aspernatur esse id
+                            incidunt cupiditate quasi eius. Exercitationem nostrum perferendis error dolores, nam cumque
+                            ipsam veniam ipsa, id atque aspernatur maiores molestias ratione? Quidem adipisci
+                            consequatur totam deleniti deserunt consequuntur libero, placeat recusandae sapiente in
+                            iusto numquam non, doloribus dolores quaerat facere. Veritatis maiores velit dignissimos
+                            iusto autem, debitis quo! Dignissimos enim ad sapiente ut libero consequatur hic dolorum
+                            dolorem accusantium. In libero, eius odit facere expedita a ducimus ab dolores soluta eos
+                            assumenda recusandae aperiam quae, quisquam voluptate sequi et distinctio aliquam.
+                            Assumenda, maxime cum veniam consequatur eum voluptate quaerat molestiae minima, suscipit ad
+                            at numquam odit cumque rem.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptate nulla, minima repellat molestiae, facere voluptatem id iusto suscipit cum repellendus temporibus possimus ipsa nesciunt, exercitationem nisi quibusdam voluptas. Nisi fugiat ea, necessitatibus nulla voluptate ipsa earum ipsam sapiente dolorem et accusantium reprehenderit unde nihil porro quos! Commodi reiciendis illum modi, eius cumque quo! Velit laborum officia inventore culpa, amet minus aspernatur maxime est voluptas qui, voluptatem sapiente cumque, recusandae voluptate laboriosam nisi! Incidunt, porro. Nisi, nihil non, molestiae a ad reiciendis voluptas tempore deleniti adipisci fuga sunt dolorem porro? Facere a obcaecati iure aut voluptatibus eaque ipsam ratione necessitatibus, odio at fugit. Facere itaque alias inventore suscipit magnam nobis quibusdam natus. Provident, ab. Laudantium nisi aliquam, eum aperiam exercitationem porro quia iure commodi voluptatem voluptates pariatur, quam sapiente ea inventore magnam id voluptate modi nulla alias ipsam distinctio autem. Sequi, ipsum? Iste tempora architecto cumque laborum fugiat, expedita necessitatibus aspernatur esse id incidunt cupiditate quasi eius. Exercitationem nostrum perferendis error dolores, nam cumque ipsam veniam ipsa, id atque aspernatur maiores molestias ratione? Quidem adipisci consequatur totam deleniti deserunt consequuntur libero, placeat recusandae sapiente in iusto numquam non, doloribus dolores quaerat facere. Veritatis maiores velit dignissimos iusto autem, debitis quo! Dignissimos enim ad sapiente ut libero consequatur hic dolorum dolorem accusantium. In libero, eius odit facere expedita a ducimus ab dolores soluta eos assumenda recusandae aperiam quae, quisquam voluptate sequi et distinctio aliquam. Assumenda, maxime cum veniam consequatur eum voluptate quaerat molestiae minima, suscipit ad at numquam odit cumque rem.
-                </div>
-            </div>
             </div>
         </div>
     </section>
     <!-- ====== Back To Top Start -->
-    <a href="javascript:void(0)" class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"></a> 
+    <a href="javascript:void(0)"
+        class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"></a>
     <!-- ====== Back To Top End -->
     <script src="assets/js/main.js" type="module"></script>
     <script src="assets/js/libs/tiny-slider.js"></script>

@@ -31,7 +31,7 @@ body {
 }
 
 .std-header{
-  @apply font-bold text-xl tracking-wider pb-2;
+  @apply pb-3 text-xl text-4xl font-bold text-primary;
 }
 
 .logo-img,.logo-text{
@@ -41,14 +41,13 @@ body {
 .sticky {
   @apply fixed z-[9999] bg-primary bg-opacity-80 transition;
   backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 .ud-header.sticky{
-  height: 70px;
+  height: 50px;
   padding: 5px;
 }
 .ud-header.sticky .logo-img{
-  max-width: 50px;    
+  max-width: 30px;    
 }
 .ud-header.sticky .logo-text{
   max-width: 140px;    
@@ -69,21 +68,25 @@ body {
 }
 
 .sticky .signUpBtn {
-  @apply bg-primary text-white hover:bg-dark hover:text-white;
+  @apply text-white bg-primary hover:bg-dark hover:text-white;
 }
 
-#navbarCollapse{
-  &.sticky{
-    position: fixed;
-    top: 57px;
-    width: 100%;
-    + #content{
-      padding-top: 100px;
+#navbarWrapper{
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  &.static{
+    @apply  bg-transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+    #navbarCollapse{
+      @apply  transition bg-opacity-80;
+      backdrop-filter: blur(5px);
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+    
     }
   }
 }
-
-
 .tns-outer .tns-controls button[data-controls="prev"]{
       width: 50px;
       height: 50px;
