@@ -6,7 +6,7 @@ import {projectsContainer, getProjects} from "./modules/data.js";
 
   document.addEventListener('DOMContentLoaded',() => {
     getProjects();
-   
+
   })
 
 // ======= Sticky
@@ -49,7 +49,7 @@ import {projectsContainer, getProjects} from "./modules/data.js";
       if(!entry.isIntersecting && entry.boundingClientRect.top === -1){
         console.log(entry.isIntersecting);
         entry.target.classList.add('static');
-      } else{
+      } else {
         entry.target.classList.remove('static');
       }
      })
@@ -59,8 +59,8 @@ import {projectsContainer, getProjects} from "./modules/data.js";
    });
   observer.observe(navbar);
 
-  const menuButton = document.querySelector('#menuToggle'); 
-  const mainNav = document.querySelector('#main-nav-list'); 
+  const menuButton = document.querySelector('#menuToggle');
+  const mainNav = document.querySelector('#main-nav-list');
   if(menuButton){
     menuButton.addEventListener('click',(e)=> {
       menuButton.classList.toggle('active');

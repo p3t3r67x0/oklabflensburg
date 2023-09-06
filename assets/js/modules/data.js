@@ -50,7 +50,7 @@
              });
 
          } catch {
-             projectsContainer.textContent = "Keine Projektze vorhanden";
+             projectsContainer.textContent = "Keine Projekte vorhanden";
          }
      };
  }
