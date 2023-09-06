@@ -365,6 +365,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -532,6 +539,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -582,6 +590,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: auto;
 }
 
+.top-3 {
+  top: 0.75rem;
+}
+
 .top-1 {
   top: 0.25rem;
 }
@@ -616,6 +628,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-20 {
   z-index: 20;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
 }
 
 .-mx-4 {
@@ -718,6 +738,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0px;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -808,6 +832,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-full {
   height: 100%;
+}
+
+.max-h-0 {
+  max-height: 0px;
 }
 
 .w-full {
@@ -1291,6 +1319,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2.5rem;
 }
 
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
 .pt-\[170px\] {
   padding-top: 170px;
 }
@@ -1301,10 +1333,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-10 {
   padding-left: 2.5rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
 }
 
 .pt-6 {
@@ -1415,10 +1443,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 100;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1474,6 +1498,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(205 206 214 / var(--tw-text-opacity));
 }
 
+.text-gray {
+  --tw-text-opacity: 1;
+  color: rgb(61 61 61 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(33 43 54 / var(--tw-text-opacity));
@@ -1489,6 +1518,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
 }
 
+.placeholder-\[\#ACB6BE\]:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(172 182 190 / var(--tw-placeholder-opacity));
+}
+
 .placeholder-\[\#ACB6BE\]::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
@@ -1496,6 +1530,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .shadow-lg {
@@ -1545,9 +1583,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1559,7 +1603,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1617,6 +1663,8 @@ body {
 
 p {
   margin-bottom: 0.75rem;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 .logo-img,.logo-text{
@@ -1628,9 +1676,9 @@ p {
   z-index: 9999;
   background-color: rgb(10 39 56 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.8;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   -webkit-backdrop-filter: blur(5px);
@@ -1689,6 +1737,7 @@ p {
 }
 
 #navbarWrapper{
+  position: -webkit-sticky;
   position: sticky;
   top: -1px;
   &.static {
@@ -1702,9 +1751,9 @@ p {
       --tw-bg-opacity: 0.8;
     }
     #navbarCollapse {
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
       transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 150ms;
     }
@@ -1713,6 +1762,54 @@ p {
               backdrop-filter: blur(5px);
       box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
     }
+  }
+}
+
+#menuToggle{
+  padding: 17px 18px;
+  height: 40px;
+  .bar {
+    position: absolute;
+  }
+  .bar {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+  .bar{
+    width: 26px;
+    height: 2px;
+    left: 5px;
+    transition: all 0.1s ease-in;
+    &.bar-1{
+      top: 8px;
+    }
+    &.bar-2{
+      top: 16px;
+    }
+    &.bar-3{
+      top: 24px;
+    }
+  }
+  &.active{
+    .bar-1{
+      top: 16px;
+      transform: rotate(45deg);
+    }
+    .bar-2{
+      opacity: 0;
+    }
+    .bar-3{
+      top: 16px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+#main-nav-list{
+  &.open{
+    opacity: 1;
+    display: flex;
+    max-height: 300vh;
   }
 }
 
@@ -1788,31 +1885,6 @@ p {
 		rgba(10, 39, 56, 0.5),
 		rgba(0, 0, 0, 0)
 	);
-}
-
-#menuToggle{
-  .bar{
-    position: absolute;
-    width: 1.6rem
-  }
-  .bar {
-    height: 0.25rem;
-  }
-  .bar {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-  .bar{
-    &.bar-1{
-      top: 0.4rem;
-    }
-    &.bar-2{
-      top: 0.9rem
-    }
-    &.bar-3{
-      top: 1.4rem
-    }
-  }
 }
 
 .after\:absolute::after {
@@ -1926,7 +1998,8 @@ p {
 }
 
 .hover\:underline:hover {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .hover\:opacity-70:hover {
@@ -1996,8 +2069,30 @@ p {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-2 {
+    order: 2;
+  }
+
+  .sm\:order-1 {
+    order: 1;
+  }
+
+  .sm\:mr-0 {
+    margin-right: 0px;
+  }
+
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:max-h-fit {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
   }
 
   .sm\:w-1\/2 {
@@ -2057,6 +2152,10 @@ p {
 
   .sm\:leading-relaxed {
     line-height: 1.625;
+  }
+
+  .sm\:opacity-100 {
+    opacity: 1;
   }
 }
 

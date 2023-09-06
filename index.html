@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wir machen aus offen Daten nutzerfreundliche Anwendungen - OK Lab Flensburg</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/tiny-slider.css">
     <link rel="stylesheet" href="assets/css/tailwind.css">
@@ -15,18 +23,21 @@
 
 </head>
 
-<body class="color-gray">
+<body class="text-gray">
     <!-- HEADER -->
     <div class="ud-header w-full fixed bg-primary p-4 h-[170px]">
         <div class="container">
             <div class="relative flex items-center justify-between">
-                <div class="w-full max-w-full px-4 text-center">
+                <div class="w-full max-w-full px-4 pr-10 text-center sm_pr-4">
                     <a href="index.html" class="flex justify-center text-center home-link wow fadeInUp"
                         data-wow-delay=".3s">
                         <img src="assets/images/logo/oklabflensburg_logo.svg" alt="image"
                             class="logo-img mr-5 w-full max-w-[30%] md:max-w-[120px] opacity-80 transition duration-300 ease-in-out hover:opacity-100">
                         <img src="assets/images/logo/logo.svg" alt="logo"
-                            class="logo-text max-w-[50%] md:max-w-[300px]">
+                            class="logo-text max-w-[50%] md:max-w-[300px] mr-4 sm:mr-0"> 
+                           
+                               
+                            
                     </a>
                 </div>
             </div>
@@ -55,15 +66,15 @@
     <!-- NAVBAR -->
     <div id="navbarWrapper" class="z-10 bg-primary">
         <div class="spacer h-[51px] bg-transparent w-full"></div>
-        <nav id="navbarCollapse" class="pb-3 bg-primary">
-           <div class="container flex justify-end">
-            <button id="menuToggle" class="relative p-4 border-2 border-white rounded-lg">
-                <span class="bar bar-1"></span>
-                <span class="bar bar-2"></span>
-                <span class="bar bar-3"></span>
-            </button>
-           </div>
-            <ul class="container flex flex-col items-center justify-center text-sm md:text-base lg:text-xl sm:flex-row">
+        <nav id="navbarCollapse" class="pb-3 bg-primary">        
+            <div class="container flex justify-end">
+                <button id="menuToggle" class="relative right-0 mb-4 block border-2 border-white rounded-lg top-3 sm:hidden">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+            <ul id="main-nav-list" class="container flex-col items-center justify-center hidden text-sm transition-all opacity-0 sm:opacity-100 sm:flex max-h-0 sm:max-h-fit md:text-base lg:text-xl sm:flex-row">
                 <li class="relative group">
                     <a href="#home"
                         class="flex py-1 mx-8 font-bold text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Projekte</a>
@@ -90,7 +101,7 @@
     <div class="w-full py-3 bg-primary mt-[-100px] h-[100px]"></div>
     <section id="content" class="pt-6 md:pt-8 lg:pt-16">
         <div class="w-full">
-            <div class="container font-light">
+            <div class="container font-medium">
                 <article class="grid grid-cols-1 mb-16 gap-x-8 md:grid-cols-2">
                     <div class="left">
                         <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
@@ -120,7 +131,7 @@
                 </article>
                 <hr class="mb-16 divider">
                 <article class="grid grid-cols-1 mb-16 gap-x-8 md:grid-cols-2">
-                    <div class="left">
+                    <div class="left order-2 sm:order-1">
                         <div class="std-header">
                             <div class="mainline">Headline</div>
                             <div class="subline">Subline</div>
@@ -139,7 +150,7 @@
                             lesen</button>
 
                     </div>
-                    <div class="right">
+                    <div class="right order-1 sm:order-2">
                         <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
                     </div>
 

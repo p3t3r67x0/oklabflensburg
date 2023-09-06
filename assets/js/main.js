@@ -45,12 +45,25 @@ import {projectsContainer, getProjects} from "./modules/data.js";
 
    const observer = new IntersectionObserver(entries => {
      entries.forEach(entry => {
-       console.log(entry.isIntersecting);
-       entry.target.classList.toggle('static',!entry.isIntersecting && !entry.boundingClientRect.top > 0);
-       
+      console.log(entry.boundingClientRect.top);
+      if(!entry.isIntersecting && entry.boundingClientRect.top === -1){
+        console.log(entry.isIntersecting);
+        entry.target.classList.add('static');
+      } else{
+        entry.target.classList.remove('static');
+      }
      })
    },{
      threshold:1,
      rootMargin: "0px"
    });
   observer.observe(navbar);
+
+  const menuButton = document.querySelector('#menuToggle'); 
+  const mainNav = document.querySelector('#main-nav-list'); 
+  if(menuButton){
+    menuButton.addEventListener('click',(e)=> {
+      menuButton.classList.toggle('active');
+      mainNav.classList.toggle('open');
+    })
+  }

@@ -16,6 +16,7 @@
 body {
   font-family: "Mona Sans", sans-serif;
   letter-spacing: 1px;
+  
 }
 
 .font-stretch-100{
@@ -41,7 +42,8 @@ body {
   }
 }
 p{
-  @apply mb-3;
+  @apply mb-3 subpixel-antialiased;
+  
 }
 .logo-img,.logo-text{
  transition: all 0.2s ease-in-out; 
@@ -94,6 +96,47 @@ p{
       box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
     
     }
+  }
+}
+#menuToggle{
+  padding: 17px 18px;
+  height: 40px;
+  .bar{
+    @apply absolute bg-white;
+    width: 26px;
+    height: 2px;
+    left: 5px;
+    transition: all 0.1s ease-in;
+    &.bar-1{
+      top: 8px;
+    }
+    &.bar-2{
+      top: 16px;
+    }
+    &.bar-3{
+      top: 24px;
+    }
+  }
+  &.active{
+    .bar-1{
+      top: 16px;
+      transform: rotate(45deg);
+    }
+    .bar-2{
+      opacity: 0;
+    }
+    .bar-3{
+      top: 16px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+#main-nav-list{
+  &.open{
+    opacity: 1;
+    display: flex;
+    max-height: 300vh;
+
   }
 }
 .tns-outer .tns-controls button[data-controls="prev"]{
@@ -164,20 +207,4 @@ p{
 		rgba(10, 39, 56, 0.5),
 		rgba(0, 0, 0, 0)
 	);
-}
-#menuToggle{
-  .bar{
-    position: absolute;
-    width: 1.6rem;
-    @apply h-1 bg-white;
-    &.bar-1{
-      top: 0.4rem;
-    }
-    &.bar-2{
-      top: 0.9rem
-    }
-    &.bar-3{
-      top: 1.4rem
-    }
-  }
 }
