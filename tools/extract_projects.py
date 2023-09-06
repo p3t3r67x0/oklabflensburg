@@ -32,7 +32,7 @@ files = os.listdir(prjdir)
 for fl in files:
     if not re.match(r'\d{4}-\d{2}-\d{2}-fl-', fl):
         continue
-        
+       
     with open(os.sep.join([prjdir,fl])) as f:
         # split by '---' to get yaml header
         x = f.read().split('---')
@@ -97,9 +97,8 @@ for fl in files:
 
         print(prj)
         projects.append(prj)
-            
-
-# create project list for export 
+           
+# create project list for export
 pl = {
     'name': NAME,
     'version': VERSION,
