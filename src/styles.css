@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-
 @font-face {
   font-family: 'Mona Sans';
   src:
@@ -8,7 +6,7 @@
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
- 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,53 +14,64 @@
 body {
   font-family: "Mona Sans", sans-serif;
   letter-spacing: 1px;
-  
+
 }
 
-.font-stretch-100{
+.font-stretch-100 {
   font-stretch: 100%;
 }
-.font-stretch-110{
+
+.font-stretch-110 {
   font-stretch: 110%;
 
 }
-.font-stretch-90{
+
+.font-stretch-90 {
   font-stretch: 90%;
 
 }
 
-.std-header{
+.std-header {
   @apply mb-3 text-primary;
-  .mainline{
-    @apply mb-2 text-4xl font-bold;
-  }
-  .subline{
-    @apply text-xl font-medium;
-    font-stretch: 120%;
-  }
 }
-p{
+
+.std-header.mainline {
+  @apply mb-2 text-4xl font-bold;
+}
+
+.std-header .subline {
+  @apply text-xl font-medium;
+  font-stretch: 120%;
+}
+
+p {
   @apply mb-3 subpixel-antialiased;
-  
+
 }
-.logo-img,.logo-text{
- transition: all 0.2s ease-in-out; 
+
+.logo-img,
+.logo-text {
+  transition: all 0.2s ease-in-out;
 }
 
 .sticky {
   @apply fixed z-[9999] bg-primary bg-opacity-80 transition;
   backdrop-filter: blur(5px);
 }
-.ud-header.sticky{
+
+.ud-header.sticky {
   height: 50px;
   padding: 5px;
 }
-.ud-header.sticky .logo-img{
-  max-width: 30px;    
+
+.ud-header.sticky .logo-img {
+  max-width: 30px;
 }
-.ud-header.sticky .logo-text{
-  max-width: 140px;    
+
+.ud-header.sticky .logo-text {
+  max-width: 140px;
 }
+
 .ud-header.sticky .navbar-logo {
   @apply py-2;
 }
@@ -72,139 +81,156 @@ p{
 }
 
 
-.sticky {
-  .loginBtn {
-    @apply text-dark hover:text-primary hover:opacity-100;
-  }
+.sticky .loginBtn {
+  @apply text-dark hover: text-primary hover:opacity-100;
 }
+
 
 .sticky .signUpBtn {
-  @apply text-white bg-primary hover:bg-dark hover:text-white;
+  @apply text-white bg-primary hover: bg-dark hover:text-white;
 }
 
-#navbarWrapper{
+#navbarWrapper {
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
-  &.static{
-    @apply  bg-transparent;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-    #navbarCollapse{
-      @apply  transition bg-opacity-80;
-      backdrop-filter: blur(5px);
-      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-    
-    }
-  }
 }
-#menuToggle{
+
+#navbarWrapper.static {
+  @apply bg-transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+#navbarCollapse {
+  @apply transition bg-opacity-80;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+
+}
+
+#menuToggle {
   padding: 17px 18px;
   height: 40px;
-  .bar{
-    @apply absolute bg-white;
-    width: 26px;
-    height: 2px;
-    left: 5px;
-    transition: all 0.1s ease-in;
-    &.bar-1{
-      top: 8px;
-    }
-    &.bar-2{
-      top: 16px;
-    }
-    &.bar-3{
-      top: 24px;
-    }
-  }
-  &.active{
-    .bar-1{
-      top: 16px;
-      transform: rotate(45deg);
-    }
-    .bar-2{
-      opacity: 0;
-    }
-    .bar-3{
-      top: 16px;
-      transform: rotate(-45deg);
-    }
-  }
 }
-#main-nav-list{
-  &.open{
-    opacity: 1;
-    display: flex;
-    max-height: 300vh;
 
-  }
+#menuToggle.active .bar-1 {
+  top: 16px;
+  transform: rotate(45deg);
 }
-.tns-outer .tns-controls button[data-controls="prev"]{
-      width: 50px;
-      height: 50px;
-      margin-left: -40px;
+
+#menuToggle.active .bar-2 {
+  opacity: 0;
 }
-.tns-outer .tns-controls button[data-controls="next"]{
+
+#menuToggle.active .bar-3 {
+  top: 16px;
+  transform: rotate(-45deg);
+}
+
+#menuToggle .bar {
+  @apply absolute bg-white;
+  width: 26px;
+  height: 2px;
+  left: 5px;
+  transition: all 0.1s ease-in;
+}
+
+#menuToggle .bar.bar-1 {
+  top: 8px;
+}
+
+#menuToggle .bar.bar-2 {
+  top: 16px;
+}
+
+#menuToggle .bar.bar-3 {
+  top: 24px;
+}
+
+#main-nav-list.open {
+  opacity: 1;
+  display: flex;
+  max-height: 300vh;
+
+}
+
+.tns-outer .tns-controls button[data-controls="prev"] {
+  width: 50px;
+  height: 50px;
+  margin-left: -40px;
+}
+
+.tns-outer .tns-controls button[data-controls="next"] {
   width: 50px;
   height: 50px;
   margin-right: -40px;
 }
-.tns-outer{
+
+.tns-outer {
   position: relative;
-  .tns-controls{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: calc(50% - 50px);
-    .prev{
-      position: relative;
-      width: 30px;
-      margin-left: -18px;
-      .bar{
-        position: absolute;
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        &:first-child{
-          top: 10px;
-          transform: rotate(45deg);
-        }
-        &:last-child{
-          top: -10px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-    .next{
-      position: relative;
-      width: 30px;
-      margin-right: -18px;
-      .bar{
-        position: absolute;
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        &:first-child{
-          top: -10px;
-          transform: rotate(45deg);
-        }
-        &:last-child{
-          top: 10px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
 }
 
-.divider{
+.tns-outer .tns-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 50px);
+}
+
+.tns-outer .tns-controls .prev {
+  position: relative;
+  width: 30px;
+  margin-left: -18px;
+}
+
+.tns-outer .tns-controls .prev .bar {
+  position: absolute;
+  height: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+.tns-outer .tns-controls .prev .bar:first-child {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.tns-outer .tns-controls .prev .bar:last-child {
+  top: -10px;
+  transform: rotate(-45deg);
+}
+
+.tns-outer .tns-controls .next {
+  position: relative;
+  width: 30px;
+  margin-right: -18px;
+}
+
+.tns-outer .tns-controls .next .bar {
+  position: absolute;
+  height: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+.tns-outer .tns-controls .next:first-child {
+  top: -10px;
+  transform: rotate(45deg);
+}
+
+.tns-outer .tns-controls .next:last-child {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+
+.divider {
   @apply border-0 h-[2px] w-full;
-  background-image: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0),
-		rgba(10, 39, 56, 0.5),
-		rgba(0, 0, 0, 0)
-	);
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(10, 39, 56, 0.5),
+      rgba(0, 0, 0, 0));
 }
