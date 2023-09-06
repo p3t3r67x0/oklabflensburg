@@ -45,9 +45,7 @@ import {projectsContainer, getProjects} from "./modules/data.js";
 
    const observer = new IntersectionObserver(entries => {
      entries.forEach(entry => {
-      console.log(entry.boundingClientRect.top);
       if(!entry.isIntersecting && entry.boundingClientRect.top === -1){
-        console.log(entry.isIntersecting);
         entry.target.classList.add('static');
       } else {
         entry.target.classList.remove('static');
