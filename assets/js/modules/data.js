@@ -16,7 +16,7 @@
                         image = "/assets/images/blog/blog-02.jpg";
                     }
                     console.log(image);
-                     projectsHtml = projectsHtml + '<a href="' + item.link + '" target="_blank" class="project pr-4 pl-4">' +
+                     projectsHtml = projectsHtml + '<a href="' + item.link + '" target="_blank" class="project block p-4">' +
                          '<div class="h-0 relative pt-1/1 mb-4">' +
                          '<img src="' + image + '" class="shadow rounded-full absolute inset-0 w-full h-full object-cover mb-4"/>' +
                          '</div>' +
@@ -32,7 +32,8 @@
                  items: 1,
                  slideBy: 1,
                  autoplay: false,
-                 controlsText: ['<div class="prev" ><span class="bar"></span><span class="bar"></span></div>', '<div class="next" ><span class="bar"></span><span class="bar"></span></div>'],
+                 controlsContainer:'#sliderNavigation',
+                 //controlsText: ['<div class="prev" ><span class="bar"></span><span class="bar"></span></div>', '<div class="next" ><span class="bar"></span><span class="bar"></span></div>'],
                  responsive: {
                      480: {
                          items: 2,
@@ -41,7 +42,7 @@
                          items: 3,
                      },
                      1024: {
-                         items: 3,
+                         items: 4,
                      },
                      1200: {
                          items: 4

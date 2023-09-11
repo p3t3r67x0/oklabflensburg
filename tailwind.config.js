@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./*.html", "./assets/**/*.js"],
 
@@ -5,13 +6,15 @@ module.exports = {
     container: {
       center: true,
       padding: "16px",
-      screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        xl: '1240px',
-        '2xl': '1240',
-      },
+     
+    },
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '984px',
+      xl: '1240px',
+      '2xl': '1240',
     },
     extend: {
       colors: {
@@ -19,8 +22,8 @@ module.exports = {
         gray: "#3d3d3d",
         dark: "#090E34",
         "dark-700": "#090e34b3",
-        primary: "#0a2738",
-        secondary: "#0069f6",
+        primary: "#00367d",
+        secondary: "#0045f6",
         "body-color": "#637381",
         warning: "#FBBF24",
       },

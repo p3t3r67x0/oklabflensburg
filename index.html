@@ -57,9 +57,14 @@
     </div>
     <!-- PROJECTS -->
     <div class="w-full pb-3 bg-primary">
-        <div class="container pl-10 pr-10">
-            <div id="projects" class="tns-slider">
-
+        <div class="container relative pl-10 pr-10">
+            <div id="sliderNavigation" class="absolute left-0 right-0 z-10 flex justify-between w-full pointer-events-none top-[calc(50%-40px)] xs:top-[100px] sm:top-[130px] md:top-[85px]">
+                <div class="prev"><img src="./assets/images/default/ok-arrow-left.svg" class="w-8 cursor-pointer pointer-events-auto"></div>
+                <div class="next"><img src="./assets/images/default/ok-arrow-right.svg" class="w-8 cursor-pointer pointer-events-auto"></div>
+            </div>
+            <div class="max-w-screen-sm m-auto">
+                <div id="projects" class="tns-slider">
+                </div>
             </div>
         </div>
     </div>
@@ -99,10 +104,10 @@
         </nav>
     </div>
     <div class="w-full py-3 bg-primary mt-[-100px] h-[100px]"></div>
-    <section id="content" class="pt-6 md:pt-8 lg:pt-16">
-        <div class="w-full">
-            <div class="container font-medium">
-                <article class="grid grid-cols-1 mb-16 gap-x-8 md:grid-cols-2">
+    <section id="content" class="">
+        <div class="w-full py-16 bg-gradient-left">
+            <div class="container font-light">
+                <article class="grid grid-cols-1 gap-x-8 md:grid-cols-2">
                     <div class="left">
                         <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
                     </div>
@@ -129,7 +134,10 @@
                             lesen</button>
                     </div>
                 </article>
-                <hr class="mb-16 divider">
+                </div>
+                </div>
+                <div class="w-full py-16 bg-gradient-right">
+                    <div class="container font-light">
                 <article class="grid grid-cols-1 mb-16 gap-x-8 md:grid-cols-2">
                     <div class="order-2 left sm:order-1">
                         <div class="std-header">
@@ -153,8 +161,6 @@
                     <div class="order-1 right sm:order-2">
                         <img src="/assets/images/blog/blog-02.jpg" alt="image" class="w-full mb-4 md:mb-6">
                     </div>
-
-
                 </article>
             </div>
         </div>
