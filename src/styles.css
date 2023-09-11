@@ -35,7 +35,7 @@ body {
   @apply mb-3 text-primary;
 }
 
-.std-header.mainline {
+.std-header .mainline {
   @apply mb-2 text-4xl font-bold;
 }
 
@@ -155,11 +155,11 @@ p {
   }
 .bg-gradient-left{
   background: rgb(34,193,195);
-background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(90deg, rgba(34,193,195,0.41780462184873945) 0%, rgba(253,187,45,0.41220238095238093) 100%);
 }
 .bg-gradient-right{
   background: rgb(34,193,195);
-background: linear-gradient(275deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(270deg, rgba(34,193,195,0.41780462184873945) 0%, rgba(253,187,45,0.41220238095238093) 100%);
 }
 .divider {
   @apply border-0 h-[2px] w-full;
