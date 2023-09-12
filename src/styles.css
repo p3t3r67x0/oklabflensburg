@@ -75,7 +75,24 @@ p {
 .ud-header.sticky .navbar-logo {
   @apply py-2;
 }
+#navMobile{
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  pointer-events: none;
+}
 
+#navMobile.open{
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: all;
+}
+
+.ud-header.sticky + #navMobile{
+  top: 50px; 
+  @apply bg-opacity-80;
+  backdrop-filter: blur(5px);
+}
 .sticky #navbarToggler span {
   @apply bg-dark;
 }
@@ -98,14 +115,11 @@ p {
 #navbarWrapper.static {
   @apply bg-transparent;
   backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 #navbarCollapse {
   @apply transition bg-opacity-80;
   backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-
 }
 
 #menuToggle {
@@ -113,17 +127,17 @@ p {
   height: 40px;
 }
 
-#menuToggle.active .bar-1 {
-  top: 16px;
+#menuToggle.active .bar.bar-1 {
+  top: 20px;
   transform: rotate(45deg);
 }
 
-#menuToggle.active .bar-2 {
+#menuToggle.active .bar.bar-2 {
   opacity: 0;
 }
 
-#menuToggle.active .bar-3 {
-  top: 16px;
+#menuToggle.active .bar.bar-3 {
+  top: 20px;
   transform: rotate(-45deg);
 }
 
@@ -136,15 +150,15 @@ p {
 }
 
 #menuToggle .bar.bar-1 {
-  top: 8px;
+  top: 12px;
 }
 
 #menuToggle .bar.bar-2 {
-  top: 16px;
+  top: 20px;
 }
 
 #menuToggle .bar.bar-3 {
-  top: 24px;
+  top: 28px;
 }
 
 #main-nav-list.open {

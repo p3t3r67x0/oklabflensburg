@@ -21,24 +21,6 @@ import {projectsContainer, getProjects} from "./modules/data.js";
     } else {
       ud_header.classList.remove("sticky");
     }
-
-    // if (window.scrollY > (navbar.offsetTop - 70)) {
-    //   navbar.classList.add("sticky");
-
-    // } else {
-    //   navbar.classList.remove("sticky");
-    // }
-
-    // show or hide the back-top-top button
-    const backToTop = document.querySelector(".back-to-top");
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
   };
 
   const navbar = document.querySelector('#navbarWrapper');
@@ -58,9 +40,10 @@ import {projectsContainer, getProjects} from "./modules/data.js";
   observer.observe(navbar);
 
   const menuButton = document.querySelector('#menuToggle');
-  const mainNav = document.querySelector('#main-nav-list');
+  const mainNav = document.querySelector('#navMobile');
   if(menuButton){
     menuButton.addEventListener('click',(e)=> {
+      e.preventDefault();
       menuButton.classList.toggle('active');
       mainNav.classList.toggle('open');
     })

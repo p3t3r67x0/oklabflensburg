@@ -365,6 +365,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -546,6 +553,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -598,6 +606,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-\[calc\(50\%-20px\)\] {
   top: calc(50% - 20px);
+}
+
+.top-\[170px\] {
+  top: 170px;
 }
 
 .top-\[calc\(50\%-22px\)\] {
@@ -697,6 +709,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mx-3 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .-mx-2 {
@@ -866,6 +883,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-full {
   height: 100%;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .max-h-0 {
@@ -1363,11 +1384,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 4rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .px-11 {
   padding-left: 2.75rem;
   padding-right: 2.75rem;
@@ -1588,7 +1604,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(173 173 173 / var(--tw-text-opacity));
 }
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .placeholder-\[\#ACB6BE\]::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(172 182 190 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-\[\#ACB6BE\]:-ms-input-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(172 182 190 / var(--tw-placeholder-opacity));
 }
@@ -1653,9 +1679,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1673,7 +1699,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1739,9 +1767,9 @@ p {
   z-index: 9999;
   background-color: rgb(0 54 125 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.8;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   -webkit-backdrop-filter: blur(5px);
@@ -1764,6 +1792,26 @@ p {
 .ud-header.sticky .navbar-logo {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+#navMobile{
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  pointer-events: none;
+}
+
+#navMobile.open{
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: all;
+}
+
+.ud-header.sticky + #navMobile{
+  top: 50px;
+  --tw-bg-opacity: 0.8;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .sticky #navbarToggler span {
@@ -1797,6 +1845,7 @@ p {
 }
 
 #navbarWrapper {
+  position: -webkit-sticky;
   position: sticky;
   top: -1px;
 }
@@ -1805,19 +1854,17 @@ p {
   background-color: transparent;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 #navbarCollapse {
   --tw-bg-opacity: 0.8;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 #menuToggle {
@@ -1825,17 +1872,17 @@ p {
   height: 40px;
 }
 
-#menuToggle.active .bar-1 {
-  top: 16px;
+#menuToggle.active .bar.bar-1 {
+  top: 20px;
   transform: rotate(45deg);
 }
 
-#menuToggle.active .bar-2 {
+#menuToggle.active .bar.bar-2 {
   opacity: 0;
 }
 
-#menuToggle.active .bar-3 {
-  top: 16px;
+#menuToggle.active .bar.bar-3 {
+  top: 20px;
   transform: rotate(-45deg);
 }
 
@@ -1850,15 +1897,15 @@ p {
 }
 
 #menuToggle .bar.bar-1 {
-  top: 8px;
+  top: 12px;
 }
 
 #menuToggle .bar.bar-2 {
-  top: 16px;
+  top: 20px;
 }
 
 #menuToggle .bar.bar-3 {
-  top: 24px;
+  top: 28px;
 }
 
 #main-nav-list.open {
@@ -1998,7 +2045,8 @@ p {
 }
 
 .hover\:underline:hover {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .hover\:opacity-70:hover {
@@ -2112,6 +2160,7 @@ p {
   }
 
   .sm\:max-h-fit {
+    max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
   }
@@ -2189,6 +2238,10 @@ p {
     margin-bottom: 1.5rem;
   }
 
+  .md\:h-\[51px\] {
+    height: 51px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2237,6 +2290,11 @@ p {
   .md\:py-\[120px\] {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .md\:pt-\[130px\] {
@@ -2333,6 +2391,10 @@ p {
 
   .lg\:h-\[45\%\] {
     height: 45%;
+  }
+
+  .lg\:h-\[50px\] {
+    height: 50px;
   }
 
   .lg\:w-full {

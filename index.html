@@ -45,27 +45,27 @@
             </div>
         </div>
     </div>
-    <div id="navMobile" class="w-full">
-            <ul id="main-nav-list" class="container flex-col items-center justify-center hidden text-sm transition-all opacity-0 sm:opacity-100 sm:flex max-h-0 sm:max-h-fit md:text-base lg:text-xl sm:flex-row">
+    <div id="navMobile" class="fixed w-full bg-primary top-[170px] z-[999] transition-all py-8">
+            <ul id="main-nav-list" class="container flex-col items-center justify-center text-sm text-center transition-all sm:hidden">
                 <li class="relative group">
                     <a href="#home"
-                        class="flex py-1 mx-8 font-bold text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Projekte</a>
+                        class="block py-1 mx-8 my-2 text-lg font-bold text-white transition-opacity ud-menu-scroll hover:opacity-50">Projekte</a>
                 </li>
                 <li class="relative group">
                     <a href="#about"
-                        class="flex py-1 mx-8 text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Events</a>
+                        class="block py-1 mx-8 my-2 text-lg text-white transition-opacity ud-menu-scroll hover:opacity-50">Events</a>
                 </li>
                 <li class="relative group">
                     <a href="#team"
-                        class="flex py-1 mx-8 text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Team</a>
+                        class="block py-1 mx-8 my-2 text-lg text-white transition-opacity ud-menu-scroll hover:opacity-50">Team</a>
                 </li>
                 <li class="relative group">
                     <a href="#pricing"
-                        class="flex py-1 mx-8 text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Spenden</a>
+                        class="block py-1 mx-8 my-2 text-lg text-white transition-opacity ud-menu-scroll hover:opacity-50">Spenden</a>
                 </li>
                 <li class="relative group">
                     <a href="#contact"
-                        class="flex py-1 mx-8 text-white transition-opacity ud-menu-scroll lg:mr-0 lg:inline-flex lg:py-3 lg:px-0 hover:opacity-50">Kontakt</a>
+                        class="block py-1 mx-8 my-2 text-lg text-white transition-opacity ud-menu-scroll hover:opacity-50">Kontakt</a>
                 </li>
             </ul>
     </div>
@@ -73,7 +73,7 @@
     <div class="w-full flex bg-primary pt-[170px]">
         <div class="container">
             <div
-                class="flex justify-center mt-10 mb-10 font-bold leading-relaxed tracking-wider text-center text-white max-w-300">
+                class="flex justify-center mt-10 mb-10 text-xl antialiased font-bold leading-relaxed tracking-wider text-center text-white max-w-300">
                 Offene Daten und Anwendungen<br>
                 Entwickeln, Gestalten, Programmieren.<br>
                 Visualisieren, Beteiligen ...
@@ -95,8 +95,8 @@
     </div>
     <!-- NAVBAR -->
     <div id="navbarWrapper" class="z-10 hidden bg-primary sm:block">
-        <div class="spacer h-[51px] bg-transparent w-full"></div>
-        <nav id="navbarCollapse" class="pb-3 bg-primary">       
+        <div class="spacer h-[50px] md:h-[51px] lg:h-[50px] bg-transparent w-full"></div>
+        <nav id="navbarCollapse" class="pb-3 bg-primary" aria-label="Navigation">
             <div class="container flex justify-end">
             </div>
             <ul class="container flex-col items-center justify-center hidden text-sm transition-all opacity-0 sm:opacity-100 sm:flex max-h-0 sm:max-h-fit md:text-base lg:text-xl sm:flex-row">
@@ -188,7 +188,7 @@
         </div>
     </section>
     <!-- FOOTER -->
-    <footer class="w-full py-6 bg-gray-light">
+    <footer class="w-full py-12 md:py-8 bg-gray-light">
       <div class="container">
         <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-x-6">
             <div class="mb-8 left">
@@ -259,10 +259,7 @@
       </div>
     </footer>
 
-    <!-- ====== Back To Top Start -->
-    <a href="javascript:void(0)"
-        class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"></a>
-    <!-- ====== Back To Top End -->
+
     <script src="assets/js/libs/tiny-slider.js"></script>
     <script src="assets/js/main.js" type="module"></script>
 
