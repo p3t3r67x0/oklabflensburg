@@ -9,8 +9,7 @@ async function fetchData() {
 
 async function getProjects() {
     if (projectsContainer) {
-        let json = await fetchData();
-        try {
+        fetchData().then(json => {
             if (json?.projects?.length) {
                 var projectsHtml = '';
                 json.projects.forEach(item => {
@@ -29,35 +28,34 @@ async function getProjects() {
                         '</a>';
 
                 })
-            }
-            projectsContainer.innerHTML = projectsHtml;
+                projectsContainer.innerHTML = projectsHtml;
 
-            var slider = tns({
-                container: '.tns-slider',
-                items: 1,
-                slideBy: 1,
-                autoplay: false,
-                controlsContainer: '#sliderNavigation',
-                nav: false,
-                responsive: {
-                    480: {
-                        items: 2,
-                    },
-                    768: {
-                        items: 3,
-                    },
-                    1024: {
-                        items: 4,
-                    },
-                    1200: {
-                        items: 4
+                var slider = tns({
+                    container: '.tns-slider',
+                    items: 1,
+                    slideBy: 1,
+                    autoplay: false,
+                    controlsContainer: '#sliderNavigation',
+                    nav: false,
+                    responsive: {
+                        480: {
+                            items: 2,
+                        },
+                        768: {
+                            items: 3,
+                        },
+                        1024: {
+                            items: 4,
+                        },
+                        1200: {
+                            items: 4
+                        }
                     }
-                }
-            });
-
-        } catch {
+                });
+            }
+        }).catch(()=>{
             projectsContainer.textContent = "Keine Projekte vorhanden";
-        }
+        })
     };
 }
 
