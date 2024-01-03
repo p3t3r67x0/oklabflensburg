@@ -1,40 +1,69 @@
+@font-face {
+  font-family: Manrope;
+  src: url('./static/fonts/variable/Manrope[wght].woff2') format('woff2'),
+       url('./static/fonts/variable/Manrope[wght].ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Mluvka;
+  src: url('./static/fonts/variable/MluvkaVF.woff2') format('woff2'),
+       url('./static/fonts/variable/MluvkaVF.woff') format('woff');
+}
+
+.font-manrope {
+  font-family: Manrope;
+}
+
+.font-mluvka {
+  font-family: Mluvka;
+}
+
 .hero-container {
-  font-size: 90px;
+  width: 64vw;
+  font-size: 7vw;
   overflow-x: auto;
   line-height: 1.4;
   padding: 2px 0;
-  margin: 0 20%;
 }
 
 .hero-content {
-  background-color: #3fe27b;
-  color: #fff;
   display: inline;
-  padding: 10px 20px;
+  padding: 0 20px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
+.shape-trees {
+  shape-outside: url(./static/baumkataster_karte.webp);
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: right;
+}
+
 .bg-primary-200 {
-  background-color: #00a9fa;
+  background-color: #82ded7;
 }
 
 .bg-primary-300 {
-  background-color: #ff645f;
+  background-color: #faa1a3;
 }
 
 .bg-primary-400 {
-  background-color: #00da88;
+  background-color: #070dfa;
 }
 
-.bg-hero-200 {
-  background-color: #66cbfc;
+.text-primary-200 {
+  color: #13aaa7;
 }
 
-.bg-hero-300 {
-  background-color: #ff8282;
+.text-secondary-200 {
+  color: #388b86;
 }
 
-.bg-hero-400 {
-  background-color: #70dea1;
+.text-primary-300 {
+  color: #faa1a3;
+}
+
+.text-primary-400 {
+  color: #05b657;
 }
