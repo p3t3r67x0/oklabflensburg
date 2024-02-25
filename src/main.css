@@ -1,21 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Manrope, sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: Manrope, sans-serif; font-optical-sizing: auto;
+  }
+}
+
 @font-face {
   font-family: Manrope;
-  src: url('./static/fonts/variable/Manrope[wght].woff2') format('woff2'),
-       url('./static/fonts/variable/Manrope[wght].ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../static/fonts/variable/Manrope[wght].woff2') format('woff2');
 }
 
 @font-face {
   font-family: Mluvka;
-  src: url('./static/fonts/variable/MluvkaVF.woff2') format('woff2'),
-       url('./static/fonts/variable/MluvkaVF.woff') format('woff');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../static/fonts/variable/MluvkaVF.woff2') format('woff2');
 }
 
 .font-manrope {
-  font-family: Manrope;
+  font-family: Manrope, sans-serif;
 }
 
 .font-mluvka {
-  font-family: Mluvka;
+  font-family: Mluvka, sans-serif;
 }
 
 .hero-container {
@@ -30,11 +48,10 @@
   display: inline;
   padding: 0 20px;
   box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }
 
 .shape-trees {
-  shape-outside: url(./static/baumkataster_karte.webp);
+  shape-outside: url('../static/baumkataster_karte.webp');
   shape-margin: 1rem;
   margin: 1rem;
   float: right;

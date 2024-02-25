@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.carousel-slide');
   const prevButton = document.getElementById('prevBtn');
   const nextButton = document.getElementById('nextBtn');
@@ -58,5 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   startCarousel();
-});
-
+});*/
