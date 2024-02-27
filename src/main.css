@@ -106,6 +106,13 @@
   float: left;
 }
 
+.shape-floorarea {
+  shape-outside: url('../static/bodenflaeche_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: left;
+}
+
 .bg-primary-200 {
   background-color: #82ded7;
 }
