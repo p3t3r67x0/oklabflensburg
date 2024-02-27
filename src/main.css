@@ -57,6 +57,55 @@
   float: right;
 }
 
+.shape-monuments {
+  shape-outside: url('../static/denkmalschutz_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: left;
+}
+
+.shape-transport {
+  shape-outside: url('../static/nahverkehr_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: right;
+}
+
+.shape-recycling {
+  shape-outside: url('../static/recycling_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: left;
+}
+
+.shape-playgrounds {
+  shape-outside: url('../static/baumkataster_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: right;
+}
+
+.shape-demographics {
+  shape-outside: url('../static/baumkataster_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: left;
+}
+
+.shape-accidents {
+  shape-outside: url('../static/nahverkehr_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: right;
+}
+
+.shape-elections {
+  shape-outside: url('../static/kommunalwahl_karte.webp');
+  shape-margin: 1rem;
+  margin: 1rem;
+  float: left;
+}
+
 .bg-primary-200 {
   background-color: #82ded7;
 }
