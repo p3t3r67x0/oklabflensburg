@@ -119,31 +119,3 @@
   margin: 1rem;
   float: left;
 }
-
-.bg-primary-200 {
-  background-color: #82ded7;
-}
-
-.bg-primary-300 {
-  background-color: #faa1a3;
-}
-
-.bg-primary-400 {
-  background-color: #070dfa;
-}
-
-.text-primary-200 {
-  color: #13aaa7;
-}
-
-.text-secondary-200 {
-  color: #388b86;
-}
-
-.text-primary-300 {
-  color: #faa1a3;
-}
-
-.text-primary-400 {
-  color: #05b657;
-}
