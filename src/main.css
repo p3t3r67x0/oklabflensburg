@@ -53,69 +53,49 @@
 .shape-trees {
   shape-outside: url('../static/baumkataster-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: right;
 }
 
 .shape-monuments {
   shape-outside: url('../static/denkmalschutz-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
 
 .shape-transport {
   shape-outside: url('../static/nahverkehr-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: right;
 }
 
 .shape-recycling {
   shape-outside: url('../static/recycling-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
 
 .shape-playgrounds {
   shape-outside: url('../static/baumkataster-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: right;
 }
 
 .shape-demographics {
   shape-outside: url('../static/baumkataster-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
 
 .shape-accidents {
   shape-outside: url('../static/nahverkehr-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: right;
 }
 
 .shape-elections {
   shape-outside: url('../static/kommunalwahl-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
 
 .shape-floorarea {
   shape-outside: url('../static/bodenflaeche-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
 
 .shape-schools {
   shape-outside: url('../static/bildungsatlas-karte.webp');
   shape-margin: 1rem;
-  margin: 1rem;
-  float: left;
 }
